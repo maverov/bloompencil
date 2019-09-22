@@ -237,6 +237,8 @@ body {
       background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/andrei.jpg); }
     .team-member-card__picture--3 {
       background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/andrei.jpg); }
+    .team-member-card__picture--4 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(https://i.imgur.com/CcHZX55.jpg); }
   .team-member-card__heading {
     font-size: 2.8rem;
     font-weight: 300;
