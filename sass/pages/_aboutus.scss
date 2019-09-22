@@ -1,0 +1,223 @@
+.section-company {
+    padding: 10rem 0;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)),
+    url(../img/about-bg.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+        height: 95vh;
+    }
+
+    .paragraph-first {
+        margin-top: -5rem;
+    }
+}
+
+.content {
+    padding: 3rem;
+    background-color: $color-grey-light-1;
+    // max-width: 900px;
+    width: 70%;
+    overflow: visible;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.section-team {
+    margin-top: -20vh;
+}
+
+.grid-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+.grid-item {
+    height: 50rem;
+    flex-basis: 30%;
+    -ms-flex: auto;
+    width: 259px;
+    position: relative;
+    padding: 10px;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    margin-right: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.team-member-card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 52rem;
+    
+    &__side {
+        height: 52rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+            background-color: $color-white;
+        }
+
+    }
+
+
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-primary-light,
+                $color-primary-dark
+            ), url(../img/hristian.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-primary-light,
+                $color-primary-dark
+            ), url(https://scontent-sof1-1.xx.fbcdn.net/v/t1.0-9/10427681_767209509996385_3002393180077308080_n.jpg?_nc_cat=101&_nc_oc=AQmrUA3silRJfQ9Nsb1sIhOpzZ-jb83A6VJ6_9pfiLKwxjr0Cmekh88KS2g8cwDI52Y&_nc_ht=scontent-sof1-1.xx&oh=abf29c7c3a333b5f8d32c088e5f36afd&oe=5E3D29C0);
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-primary-light,
+                $color-primary-dark
+            ), url(../img/andrei.jpg);
+        }
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                $color-primary-light,
+                $color-primary-dark
+            ), url(../img/andrei.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 18rem;
+        left: -4rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
+
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, .85), rgba($color-primary-dark, .85));
+
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, .85), rgba($color-tertiary-dark, .85));
+
+        }
+    }
+
+    &__details {
+        padding: 5rem 3rem 2rem 3rem;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 1rem;
+                border-bottom: 1px solid #eee;
+
+            }
+        }
+    }
+}
+
+@media(max-width: 1333px) {
+    .grid-item {
+      flex-basis: 33.33%;
+    }
+  }
+  @media(max-width: 1073px) {
+     .grid-item {
+      flex-basis: 33.33%;
+      margin-right: 0;
+    }
+  }
+  @media(max-width: 815px) {
+    .grid-item {
+      flex-basis: 50%;
+      margin-right: 0;
+    }
+  }
+  @media(max-width: 555px) {
+    .grid-item {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+  }
+
+.team-member-card__social {
+    margin-top: -4rem;
+    padding: 4rem;
+    text-align: center;
+
+    i {
+        font-size: 3.8rem;
+        color: $color-grey-dark-2;
+        text-align: center;
+        
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+        &:hover {
+            background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+            -webkit-background-clip: text;
+            color: transparent;
+            transform: scale(1.2);
+            transition: all .2s;
+            cursor: pointer;
+        }
+    }
+}
