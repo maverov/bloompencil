@@ -82,7 +82,7 @@
     &__picture {
         background-size: cover;
         height: 23rem;
-        background-blend-mode: screen;
+        background-blend-mode: saturation;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         border-top-left-radius: 3px;
